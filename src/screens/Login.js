@@ -4,6 +4,8 @@
  * Login screen: accepts username/password and calls AuthorizeUser.
  * Intent comments explain the auth flow: server may return an AC (authorization
  * code) used for device verification; if present we persist it for subsequent calls.
+ *
+ * JA 10/30/25 - Link renamed to "Reset Password".
  */
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image, ScrollView, Alert, Linking } from 'react-native';
@@ -84,7 +86,7 @@ export default function Login({ navigation }) {
       </TouchableOpacity>
 
       <TouchableOpacity onPress={() => navigation.navigate('Forgot')}>
-        <Text style={styles.forgot}>Forgot password?</Text>
+        <Text style={styles.forgot}>Reset Password</Text>
       </TouchableOpacity>
     </ScrollView>
   );
